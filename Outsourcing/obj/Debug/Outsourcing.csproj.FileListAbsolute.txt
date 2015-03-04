@@ -1,0 +1,12 @@
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\bin\Debug\Outsourcing.dll
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\bin\Debug\Outsourcing.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\UserControl1.baml
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\UserControl1.g.cs
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\Outsourcing_MarkupCompile.cache
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\Outsourcing.g.resources
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\Outsourcing.Properties.Resources.resources
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\Outsourcing.dll
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\Outsourcing\obj\Debug\Outsourcing.pdb

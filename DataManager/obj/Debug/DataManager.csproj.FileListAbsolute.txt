@@ -1,0 +1,6 @@
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\DataManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\DataManager\bin\Debug\Web.config
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\DataManager\bin\Debug\DataManager.exe
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\DataManager\obj\Debug\DataManager.exe

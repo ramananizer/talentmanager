@@ -1,0 +1,6 @@
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\TalentManagerservice\bin\Release\TalentManagerservice.dll.config
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\TalentManagerservice\bin\Release\TalentManagerservice.dll
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\TalentManagerservice\bin\Release\TalentManagerservice.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\TalentManagerservice\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\TalentManagerservice\obj\Release\TalentManagerservice.dll
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\TalentManagerservice\obj\Release\TalentManagerservice.pdb

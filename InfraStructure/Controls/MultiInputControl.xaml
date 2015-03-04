@@ -1,0 +1,254 @@
+﻿<UserControl x:Class="TalentManager.Infrastructure.UserControls.MultiInputControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:inf="clr-namespace:Infrastructure.Converters"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>
+        <inf:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+        <Path x:Key="NavigationLeft" Data="M322,342 L313,352.00033 323,359.0009" HorizontalAlignment="Right"
+							 Height="17" Margin="0,47.333,301,0" Grid.Row="2"
+							 VerticalAlignment="Top" Width="10" />
+
+        <Style x:Key="LittleItemButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Width="10" Height="10">
+                            <Ellipse x:Name="ellipse" Width="10" Height="10" Fill="{TemplateBinding Background}"/>
+                            <ContentControl x:Name="cnt" HorizontalAlignment="Center"  VerticalAlignment="Center"
+									        Foreground="White" Content="{TemplateBinding Content}">
+
+                            </ContentControl>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <DataTemplate x:Key="LittleItemButtonTemplate">
+            <Border  Width="Auto" Height="Auto" BorderBrush="Transparent">
+                <Button x:Name="itemButton" Click="itemButton_Click" Style="{DynamicResource LittleItemButtonStyle}" Height="15" Width="15" Background="#FF999696" />
+            </Border>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}, Path=IsSelected}" Value="True">
+                    <Setter TargetName="itemButton" Property="Background" Value="#FF332C2C" />
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+
+        <Style x:Key="NavigationLeftButtonStyle" TargetType="RepeatButton">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RepeatButton">
+                        <Image x:Name="navigationImage" Source="/Infrastructure;component/Resources/Images/left-arrow.png" />
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                    <!--<Condition Property="Content" SourceName="cnt" Value="+"/>-->
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="navigationImage" Property="Opacity" Value="0.7"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsPressed" Value="True"/>
+                                    <!--<Condition Property="Content" SourceName="cnt" Value="+"/>-->
+                                </MultiTrigger.Conditions>
+                                <!--<Setter TargetName="ellipse" Property="Fill" Value="#FF7AD43E"/>-->
+                                <Setter TargetName="navigationImage" Property="Opacity" Value="0.7"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style x:Key="NavigationRightButtonStyle" TargetType="RepeatButton">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RepeatButton">
+                        <Image x:Name="navigationImage" Source="/Infrastructure;component/Resources/Images/right-arrow.png"/>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                    <!--<Condition Property="Content" SourceName="cnt" Value="+"/>-->
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="navigationImage" Property="Opacity" Value="0.7"/>
+                            </MultiTrigger>
+
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsPressed" Value="True"/>
+                                    <!--<Condition Property="Content" SourceName="cnt" Value="+"/>-->
+                                </MultiTrigger.Conditions>
+                                <!--<Setter TargetName="ellipse" Property="Fill" Value="#FF7AD43E"/>-->
+                                <Setter TargetName="navigationImage" Property="Opacity" Value="0.7"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=IsAtLastPosition}" Value="True">
+                    <Setter Property="Template" Value="{DynamicResource AddButtonTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <ControlTemplate x:Key="AddButtonTemplate" TargetType="RepeatButton">
+            <Image x:Name="addImage" Source="/Infrastructure;component/Resources/Images/right-plus.png"/>
+            <ControlTemplate.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsMouseOver" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <Setter TargetName="addImage" Property="Opacity" Value="0.7"/>
+                </MultiTrigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsPressed" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <Setter TargetName="addImage" Property="Opacity" Value="0.7"/>
+                </MultiTrigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style x:Key="RedButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="ButtonBorder"
+							BorderThickness="1"
+							Padding="4,2"
+							Width="{TemplateBinding Width}"
+							Height="{TemplateBinding Height}"
+							BorderBrush="DarkGray"
+							CornerRadius="4"
+							Background="{TemplateBinding Background}" >
+                            <ContentPresenter HorizontalAlignment="Center"  Content="{TemplateBinding Content}"  VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="Black" />
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#FFFD5757"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#FFAF0000"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="ButtonBorder" Property="Opacity" Value="0.7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Border CornerRadius="5,5,0,0" VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch" Background="#FFDADADA" >
+                <Grid >
+
+                    <Grid HorizontalAlignment="Left"
+                      Visibility="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=IsTaggable, Converter={StaticResource booleanToVisibilityConverter}}">
+                        <ComboBox x:Name="ItemsTypeListCombo" MinWidth="175"
+                         IsEditable="False"
+                          HorizontalAlignment="Left"
+                          Margin="5" ItemsSource="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=ItemtypesList}"
+                          SelectedValue="{Binding ElementName=buttons_list, Path=SelectedItem.Tag}"
+                           />
+                        <TextBlock Foreground="Black"
+                       Opacity=".7"
+                       Margin="10"
+                       Visibility="{Binding SelectedItem, ElementName=ItemsTypeListCombo, Converter={StaticResource NullToVisibilityConverter}}"
+                       IsHitTestVisible="False"
+                       Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=SelectTypeString}" HorizontalAlignment="Left" />
+                    </Grid>
+
+                    <Button x:Name="DeleteButton" HorizontalAlignment="Right"
+                    VerticalAlignment="Stretch"
+                    Style="{StaticResource RedButtonStyle}"
+                    Height="30"
+                    Width="80"
+                    Content="Delete" Margin="5"
+                    Background="#FFFE0000" Foreground="White"   Click="DeleteButton_Click"/>
+                </Grid>
+            </Border>
+
+        </Grid>
+        <Border Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch" CornerRadius="0,0,5,5" Background="#FFEFEFEF">
+            <ContentControl Grid.Column="1" Grid.Row="1" VerticalAlignment="Top"
+                        Margin="0"
+                        HorizontalAlignment="Stretch"
+                        Content="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=ViewTemplate}"
+                        DataContext="{Binding ElementName=buttons_list, Path=SelectedItem}"/>
+        </Border>
+
+
+        <ListBox x:Name="buttons_list" Background="Transparent"
+                 ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                 ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                 IsSynchronizedWithCurrentItem="True"
+                 Grid.Row="2"
+                 Grid.ColumnSpan="3"
+                 Margin="0,11,0,0"
+                 VerticalAlignment="Top"
+                 SelectedItem="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=SelectedItem}"
+                 HorizontalAlignment="Center"
+                 BorderBrush="Transparent"
+                 ItemsSource="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=ObjectsList, Mode=TwoWay}"
+                 ItemTemplate="{StaticResource LittleItemButtonTemplate}" SelectionChanged="buttons_list_SelectionChanged">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                        <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                    </Style.Resources>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+
+        <RepeatButton x:Name="NavigateBack" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"
+                Margin="5,0,17,0"
+                Style="{StaticResource NavigationLeftButtonStyle}"
+                FontFamily="Symbol" Click="NavigateBack_Click" Content="&lt;" />
+
+        <RepeatButton x:Name="NavigateForward" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center"
+                Margin="17,0,0,0"
+                Style="{StaticResource NavigationRightButtonStyle}"
+                FontFamily="Symbol" Click="NavigateForward_Click">
+        </RepeatButton>
+
+    </Grid>
+</UserControl>

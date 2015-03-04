@@ -1,0 +1,11 @@
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\bin\Debug\ServiceHost.exe
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\bin\Debug\ServiceHost.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\bin\Debug\TalentManagerservice.dll
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\bin\Debug\TalentManagerservice.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\obj\x86\Debug\ServiceHost.ProjectInstaller.resources
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\obj\x86\Debug\ServiceHost.exe
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\obj\x86\Debug\ServiceHost.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ServiceHost\bin\Debug\ServiceHost.exe.config

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Recruitment.Views.AllRequirements"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AllRequirements" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Search" Margin="5"/>
+        <TextBox Grid.Column="1" Margin="5"/>
+        <DataGrid Grid.Row="1" Grid.ColumnSpan="2"
+                  ItemsSource="{Binding AllRequirements}"
+                     VerticalAlignment="Stretch"
+                      Margin="20,0,0,0"
+                      AutoGenerateColumns="True" 
+                      RowHeight="34"  
+                      SelectionMode="Extended" 
+                      SelectionUnit="Cell"
+                      CanUserAddRows="True" 
+                      CanUserSortColumns="True"
+                      VerticalGridLinesBrush="Transparent" 
+                      RowBackground="#FF828282"  
+                      Foreground="White" 
+                      FontWeight="Bold" 
+                      HorizontalAlignment="Stretch" />
+    </Grid>
+</Window>

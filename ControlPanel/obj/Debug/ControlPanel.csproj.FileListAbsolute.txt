@@ -1,0 +1,12 @@
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\TalentManager\bin\Debug\ControlPanel.dll
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\TalentManager\bin\Debug\ControlPanel.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\ControlPanel.Properties.Resources.resources
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\ControlPanel.dll
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\ControlPanel.pdb
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\ControlPanelView.baml
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\ControlPanelView.g.cs
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\ControlPanel_MarkupCompile.cache
+C:\Users\Raman\Documents\Visual Studio 2010\Projects\TalentManager\ControlPanel\obj\Debug\ControlPanel.g.resources
