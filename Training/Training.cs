@@ -11,7 +11,7 @@ using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.ServiceLocation;
 using System.Collections;
 using InfraStructure.Constants;
-
+//
 namespace Training
 {
     [ModuleExport(typeof(Training))]
